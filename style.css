@@ -332,7 +332,8 @@ section {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  padding: 15px 20px;
+  color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -369,7 +370,7 @@ section {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
+  top: 15px;
   left: 15px;
   bottom: 15px;
   right: 15px;
