@@ -19,7 +19,7 @@
   --primary: rgb(93,33,209);
   --pink: #FF6B81;
   --blue: #0081FF;
-  --yellow: #F7D800;
+  --yellow: #FFBC08;
   --red: #DE3E44;
   --orange: #FE7624;
   --light-primary: rgba(93,33,209, .9);
@@ -570,18 +570,34 @@ section {
   width: 100%;
   background: #fff;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  border-radius: 5px;
+  transition: .3s;
+  color: #444444;
 }
 
 .counts .count-box i {
   font-size: 42px;
   line-height: 0;
   margin-left: 20px;
-  color: var(--primary);
 }
 
 .counts .count-box .price {
   display: block;
 }
+
+.count-box.blue{
+  color: var(--blue);
+}
+
+.count-box.red{
+  color: var(--red);
+}
+
+
+.count-box.yellow{
+  color: var(--yellow);
+}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -628,37 +644,37 @@ section {
   font-size: 18px;
 }
 
-.services .service-box.blue {
+.blue {
   border-bottom: 3px solid var(--blue);
 }
 
-.services .service-box.blue .icon {
+.blue .icon {
   color: var(--blue);
   background: rgba(1,41,112, .1);
 }
 
-.services .service-box.blue .read-more {
+.blue .read-more {
   color: var(--blue);
 }
 
-.services .service-box.blue:hover {
+.blue:hover {
   background: var(--blue);
 }
 
-.services .service-box.yellow {
+.yellow {
   border-bottom: 3px solid var(--yellow);
 }
 
-.services .service-box.yellow .icon {
+.yellow .icon {
   color: var(--yellow);
   background: rgba(247,216,0, .1);
 }
 
-.services .service-box.yellow .read-more {
+.yellow .read-more {
   color: var(--yellow);
 }
 
-.services .service-box.yellow:hover {
+.yellow:hover {
   background: var(--yellow);
 }
 
@@ -691,20 +707,20 @@ section {
   background-color: transparent;
   color: var(--red);
 }
-.services .service-box.red {
+.red {
   border-bottom: 3px solid var(--red);
 }
 
-.services .service-box.red .icon {
+.red .icon {
   color: var(--red);
   background: #fef7f8;
 }
 
-.services .service-box.red .read-more {
+.red .read-more {
   color: var(--red);
 }
 
-.services .service-box.red:hover {
+.red:hover {
   background: var(--red);
 }
 
@@ -742,9 +758,14 @@ section {
   background: #f51f9c;
 }
 
-.services .service-box:not(.yellow):hover h3,
-.services .service-box:not(.yellow):hover p,
-.services .service-box:not(.yellow):hover div {
+.count-box:hover h3,
+.count-box:hover p,
+.count-box:hover div,
+.count-box:hover i,
+.count-box:hover .price span,
+.services .service-box:hover h3,
+.services .service-box:hover p,
+.services .service-box:hover div {
   color: #fff;
 }
 
@@ -755,7 +776,7 @@ section {
 }
 
 .price span {
-  color: #9a9a9a;
+  /* color: #9a9a9a; */
   font-size: 16px;
   font-weight: 300;
 }
